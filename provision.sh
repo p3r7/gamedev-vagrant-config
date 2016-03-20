@@ -19,6 +19,7 @@ EOF
 
 # -------------------------------------------------------------------------
 # SDL
+
 sudo aptitude install -q -y -f libsdl2-dev libsdl2-image-dev libsdl2-ttf-dev libsdl2-gfx-dev
 
 # -------------------------------------------------------------------------
@@ -42,6 +43,8 @@ sudo cat >> $HOME/.bashrc <<EOF
 # Adding PSXSDK to PATH
 PATH="/usr/local/psxsdk/bin:\$PATH"
 EOF
+
+sudo aptitude install -q -y -f genisoimage
 
 ln -sf /vagrant/psxsdk-make.sh $HOME/bin/psxsdk-make
 chmod u+x $HOME/bin/psxsdk-make
